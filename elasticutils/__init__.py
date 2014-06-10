@@ -1217,7 +1217,7 @@ class S(PythonMixin):
         for suggestion, (term, kwargs) in six.iteritems(suggestions):
             qs.setdefault('suggest', {})[suggestion] = {
                 'text': term,
-                'term': {
+                'completion': {
                     'field': kwargs.get('field', '_all'),
                 },
             }
